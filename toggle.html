@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <!--jQuery 1.9 이하버전-->
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <style>
+    img {
+      width: 300px;
+    }
+  </style>
+  <script>
+    //1.9 이상 미지원        
+    $(function () {
+      $('button').toggle(
+        function () { //버튼 클릭할때 마다 이미지 바뀜                
+          $('img').attr('src', 'dotto2.png');
+        },
+        function () {
+          $('img').attr('src', 'dotto.png');
+        },
+        function () {
+          $('img').attr('src', 'dotto2.png');
+        },
+        function () {
+          $('img').attr('src', 'dotto.png');
+        },
+        function () {
+          $('img').attr('src', 'dotto2.png');
+        });
+    }); 
+  </script>
+</head>
+
+<body> <button>클릭!</button>
+  <p><img src="dotto.png" alt="" /></p>
+</body>
+
+</html>
