@@ -42,6 +42,7 @@
 
         background-color: white;
         color: black;
+        font-size: 30px;
 
         border-radius: 50px;
         border: 1px solid black;
@@ -59,6 +60,14 @@
 
         margin: 0px 150px 0px 0px;
     }
+
+    #countNum{
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
+
+        margin: 10px 10px 10px 10px;
+    }
 </style>
 <script>
     $(function () {
@@ -70,12 +79,19 @@
                 $('#dotto').attr('src', 'dotto_nuki.png');
             });
     }); 
+
+    var count=0;
+        function increase(){
+            count=count+1;
+            document.querySelector("#countNum").innerText=count;
+        }
 </script>
 
 <body>
     <div><img class="title" src="dotto_title.png"/></div>
     <div><img id = "dotto" src="dotto_nuki.png" alt="" /></div>
-    <button>click!</button>
+    <div id = "countNum">0</div>
+    <button id="countbtn" onclick="increase()">Click!</button>
 </body>
 
 
