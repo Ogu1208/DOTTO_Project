@@ -33,7 +33,7 @@
     img {
         width: 30%;
         height: 300px;
-        padding: 0px 0px 0px 100px;
+        padding: 0px 0px 0px 150px;
     }
 
     button {
@@ -42,6 +42,7 @@
 
         background-color: white;
         color: black;
+        font-size: 30px;
 
         border-radius: 50px;
         border: 1px solid black;
@@ -54,35 +55,43 @@
     }
 
     .title{
-        width: 700x;
-        height: 24px;
+        width: 700px;
+        height: 200px;
+
+        margin: 0px 150px 0px 0px;
+    }
+
+    #countNum{
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
+
+        margin: 10px 10px 10px 10px;
     }
 </style>
 <script>
     $(function () {
         $('button').toggle(
             function () { //버튼 클릭할때 마다 이미지 바뀜                
-                $('img').attr('src', 'dotto_nuki2.png');
+                $('#dotto').attr('src', 'dotto_nuki2.png');
             },
             function () {
-                $('img').attr('src', 'dotto_nuki.png');
-            },
-            function () {
-                $('img').attr('src', 'dotto_nuki2.png');
-            },
-            function () {
-                $('img').attr('src', 'dotto_nuki.png');
-            },
-            function () {
-                $('img').attr('src', 'dotto2_nuk2.png');
+                $('#dotto').attr('src', 'dotto_nuki.png');
             });
     }); 
+
+    var count=0;
+        function increase(){
+            count=count+1;
+            document.querySelector("#countNum").innerText=count;
+        }
 </script>
 
 <body>
-    <div class="title"><img src="dotto_title.png"/></div>
+    <div><img class="title" src="dotto_title.png"/></div>
     <div><img id = "dotto" src="dotto_nuki.png" alt="" /></div>
-    <button>click!</button>
+    <div id = "countNum">0</div>
+    <button id="countbtn" onclick="increase()">Click!</button>
 </body>
 
 
