@@ -1,0 +1,104 @@
+ /* COMMON */
+ body {
+   color: #333;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.4;
+   font-family: 'Jua', 'Nanum Gothic', sans-serif;
+ }
+
+ img {
+   display: block;
+ }
+
+ a {
+   /* 밑줄 없애기 */
+   text-decoration: none;
+ }
+
+ .inner {
+   width: 1100px;
+   margin: 0 auto;
+   position: relative;
+ }
+
+ ul {
+   list-style-type: none;
+ }
+
+ /* HEADER */
+ header {
+   width: 300px;
+   height: 100vw;
+   background-color: #f6f5f0;
+   background-attachment: fixed;
+   border-bottom: 1px solid #c8c8c8;
+
+ }
+
+ header>.inner {
+   /* >는 자식선택자 */
+   width: 250px;
+   height: 700px;
+   position: relative;
+   background-image: url("https://raw.githubusercontent.com/ParkYoungWoong/overwatch-hero-selector-vanilla/master/images/bg.jpg");
+   background-attachment: fixed;
+ }
+
+ header .logo {
+   background-color: blue;
+   width: 220px;
+   height: 220px;
+   position: relative;
+   /* 부모요소 기준 배치 */
+   /* top: 0;
+  bottom: 0;
+  */
+   margin: auto;
+ }
+
+ header .logo img {
+   width: 200px;
+   position: relative;
+   top: 20px;
+   margin: auto;
+
+ }
+
+ header .link_menu {
+   position: relative;
+   top: 50px;
+   left: 0;
+   display: flex;
+   list-style-type: none;
+ }
+
+ header .link_menu a {
+   font-size: 30px;
+   /* font-style: ; */
+   color: white;
+   margin-top: 10px;
+   display: inline-block;
+ }
+
+ header .link_menu a:hover {
+   text-decoration: none;
+   font-size: 30px;
+   color: black;
+   margin-top: 10px;
+ }
+
+ header .link-menu ul.menu li {
+   position: relative;
+ }
+
+
+
+ /* FOOTER */
+ footer {
+   margin-left: 300px;
+   height: 100vw;
+   background-color: yellow;
+   background-attachment: fixed;
+   border-bottom: 1px solid #c8c8c8;
+ }
