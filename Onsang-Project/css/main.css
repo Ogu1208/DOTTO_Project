@@ -18,7 +18,7 @@
  }
 
  .inner {
-   width: 1100px;
+   width: 600px;
    margin: 0 auto;
    position: relative;
  }
@@ -35,7 +35,7 @@
  /* HEADER */
  header {
    width: 300px;
-   height: 100%;
+   height: 70%;
    background-color: #f6f5f0;
    background-attachment: fixed;
    border-bottom: 1px solid #c8c8c8;
@@ -45,7 +45,7 @@
  header>.inner {
    /* >는 자식선택자 */
    width: 250px;
-   height: 700px;
+   height: 600px;
    position: relative;
    background-image: url("https://raw.githubusercontent.com/ParkYoungWoong/overwatch-hero-selector-vanilla/master/images/bg.jpg");
    background-attachment: fixed;
@@ -99,40 +99,67 @@
  }
 
 
- .wrap_whole .wrap_right {
-   width: 100vw;
- }
+.wrap_whole .wrap_right .introduce{
+  margin-bottom: 50px;
+}
+
+
+ /* .wrap_whole .wrap_left {
+   height: 300px;
+ } */
 
  .wrap_whole .wrap_right {
    width: 100vw;
-  background-color: bisque;
+   background-color: bisque;
  }
 
- .wrap_whole .wrap_right .card_wrap{
-    display: flex;
-    width: 500px;
-    margin-top: 50px;
-    position: relative;
-    margin: auto;
-
+ .wrap_whole .wrap_right .card_wrap {
+  display: flex;
+  width: 500px;
+  margin-top: 50px;
+  position: relative;
+  margin: auto;
+  
  }
- 
 
- .wrap_whole .wrap_right .card_wrap .card:first-child{
+ .wrap_whole .wrap_right .card_wrap .card:first-child {
   margin: 0;
  }
 
- .wrap_whole .wrap_right .card_wrap .card{
+ .wrap_whole .wrap_right .card_wrap .card {
   margin-left: 50px;
  }
 
- .wrap_whole .wrap_right .card_wrap .card .card-header{
-  text-align: center;
+ .wrap_whole .wrap_right .card_wrap .card-body{
+  padding: 50px;
  }
+
+
+ .wrap_whole .wrap_right .card_wrap .card .card-header {
+   text-align: center;
+ }
+
+
+ .wrap_whole .wrap_right .card_wrap .card:hover {
+   -webkit-transition: -webkit-transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+   -moz-transition: -moz-transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+   transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+   -webkit-transform: translateY(-1rem);
+   -moz-transform: translateY(-1rem);
+   -ms-transform: translateY(-1rem);
+   -o-transform: translateY(-1rem);
+   -spec-transform: translateY(-1rem);
+   transform: translateY(-1rem);
+   outline: 0;
+   background-color: #fafafa;
+   color: #0c1721;
+   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15)
+ }
+
 
  /* FOOTER */
  footer {
-  width: 100%;
+   width: 100%;
    height: 100px;
    bottom: 0px;
    position: absolute;
@@ -140,5 +167,3 @@
    background-attachment: fixed;
    border-bottom: 1px solid #c8c8c8;
  }
-
-
