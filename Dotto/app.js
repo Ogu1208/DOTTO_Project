@@ -1,19 +1,17 @@
 const btn = document.querySelector("#countbtn");
 const clickCount = document.querySelector("#countNum");
 
-
+const HIDDEN_CLASSNAME = "hidden"
 
 console.log(btn);
 var count = 0;
+
 
 function increase() {
     count = count + 1;
     clickCount.innerText = count;
     localStorage.setItem('json', JSON.stringify(count));
-    JSON.parse(localStorage.getItem('json'));
-    
 }
-
 
 
 
@@ -28,7 +26,18 @@ $(function () {
 });
 
 
+const getCount = JSON.parse(localStorage.getItem('json'));
+
+if (getCount === null) {
+    //show the form
+    clickCount.addEventListener("click", increase);
+} else {
+
+}
+
+
 btn.addEventListener("click", increase);
+
 
 
 
