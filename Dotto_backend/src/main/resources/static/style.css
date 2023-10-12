@@ -1,0 +1,55 @@
+body {
+    height: 700px;
+    width: 100%;
+    background-image: url(elephant.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 30%;
+    height: 300px;
+    padding: 0px 0px 0px 150px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+
+    background-color: white;
+    color: black;
+    font-size: 30px;
+
+    border-radius: 50px;
+    border: 1px solid black;
+
+    margin-top: 10px;
+}
+
+.movie>button:hover {
+    border: 4px solid black;
+}
+
+.title {
+    width: 700px;
+    height: 200px;
+
+    margin: 0px 150px 0px 0px;
+}
+
+#countNum {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+    margin: 10px 10px 10px 10px;
+}
