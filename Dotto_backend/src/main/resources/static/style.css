@@ -1,55 +1,122 @@
+/* body 요소에 대한 스타일 */
 body {
-    height: 700px;
+
+    margin: 0;
+    padding: 0;
     width: 100%;
-    background-image: url(elephant.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-
-
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end; /* 아이콘을 오른쪽으로 정렬 */
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center; /* 이 부분은 수정하지 않고 그대로 유지 */
 }
 
+/* form 요소에 대한 스타일 */
+form {
+     width: 100%;
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px; /* 폼과 아이콘 사이의 공백 조절 */
+}
+
+.container-fluid {
+    margin-top: 150px; /* .container-fluid와 폼 사이의 공백 조절 */
+}
+
+
+/* 이미지에 대한 스타일 */
 img {
-    width: 30%;
-    height: 300px;
-    padding: 0px 0px 0px 150px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-button {
-    width: 200px;
-    height: 50px;
-
-    background-color: white;
-    color: black;
-    font-size: 30px;
-
-    border-radius: 50px;
-    border: 1px solid black;
-
-    margin-top: 10px;
-}
-
-.movie>button:hover {
-    border: 4px solid black;
-}
-
+/* .title 클래스에 대한 스타일 */
 .title {
-    width: 700px;
-    height: 200px;
-
-    margin: 0px 150px 0px 0px;
+    width: 200px; /* 이미지의 너비를 조절하세요. */
 }
 
-#countNum {
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
 
-    margin: 10px 10px 10px 10px;
+/* #dotto 아이디에 대한 스타일 */
+#dotto {
+    width: 150px; /* 이미지의 너비를 조절하세요. */
+}
+
+/* #countNum 아이디에 대한 스타일 */
+#countNum {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* #countbtn 아이디에 대한 스타일 */
+#countbtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#countbtn:hover {
+    background-color: #0056b3;
+}
+
+.box {
+    width: 80%; /* 상자의 초기 너비 */
+    height: 50px; /* 상자의 높이 */
+    border: 1px solid #000;
+    overflow: hidden; /* 내용이 상자를 넘어가지 않도록 함 */
+}
+
+.fill {
+    width: 0; /* 초기 상자의 내용 너비 (0%) */
+    height: 100%;
+    background-color: #007bff; /* 원하는 배경 색상 */
+    transition: width 0.5s; /* 너비 애니메이션 지속 시간 */
+}
+
+
+/* 아이콘과 툴팁 스타일 */
+.tooltip-icon {
+    position: relative;
+    display: inline-block;
+    text-align: right; /* 아이콘을 오른쪽에 위치시킴 */
+    right: 50px;
+}
+
+svg {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    top: 0;
+    right: 50; /* 오른쪽에 위치하도록 조절 */
+}
+
+.tooltip-text {
+    display: none;
+    position: absolute; /* 요소의 위치를 설정 */
+    top: 45px; /* 아이콘 아래에 위치하도록 조절 */
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    width: 550px; /* 너비를 원하는 크기로 조절 */
+}
+
+.tooltip-icon:hover .tooltip-text {
+    display: block; /* 아이콘 위에 마우스를 올릴 때만 표시 */
 }
