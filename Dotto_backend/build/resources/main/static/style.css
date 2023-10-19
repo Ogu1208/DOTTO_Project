@@ -132,7 +132,7 @@ svg {
     width: 150px; /* 배너 너비 조정 */
     height: 300px; /* 배너 높이 조정 */
     margin-top: 100px;
-    background-color: #3498db; /* 배너 배경색 설정 */
+    background-color: #808080; /* 배너 배경색 설정 */
     color: #fff;
     text-align: center;
     display: flex;
