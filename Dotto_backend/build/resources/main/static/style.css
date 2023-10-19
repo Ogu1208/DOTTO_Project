@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end; /* 아이콘을 오른쪽으로 정렬 */
+    
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     text-align: center; /* 이 부분은 수정하지 않고 그대로 유지 */
@@ -119,4 +119,27 @@ svg {
 
 .tooltip-icon:hover .tooltip-text {
     display: block; /* 아이콘 위에 마우스를 올릴 때만 표시 */
+}
+
+.banner-container {
+    display: flex;
+    justify-content: space-between; /* 양 쪽으로 배치 */
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.banner {
+    width: 150px; /* 배너 너비 조정 */
+    height: 150px; /* 배너 높이 조정 */
+    background-color: #3498db; /* 배너 배경색 설정 */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_img {
+    max-width: 80px; /* 이미지 너비 조정 */
+    max-height: 80px; /* 이미지 높이 조정 */
 }
