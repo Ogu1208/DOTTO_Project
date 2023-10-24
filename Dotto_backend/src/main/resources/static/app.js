@@ -5,6 +5,7 @@ const fill = document.getElementById("fill");
 const maxCount = 30000; // 최대 값
 let count = parseInt(localStorage.getItem('json')) || 0;
 
+let keyPressed = false; // 키보드가 눌린 상태를 나타내는 변수
 
 const dotto = $('#dotto');
 let isImageNuki = true;
@@ -19,15 +20,19 @@ function increase() {
         localStorage.setItem('json', JSON.stringify(count));
         //toggleImage();
     }
+    console.log(count);
 }
 
 
-function reset() {
+
+function resetCount() {
     count = 0;
     updateCountDisplay();
     console.log(count);
     localStorage.setItem('json', '0'); // 로컬 스토리지 값을 0으로 초기화
 }
+
+
 
 function updateCountDisplay() {
     clickCount.textContent = count;
@@ -37,8 +42,6 @@ function updateCountDisplay() {
 }
 
 
-
-document.querySelector("#resetbtn").addEventListener("click", reset); // 초기화 버튼에 이벤트 핸들러 추가
 // 이미지 클릭 이벤트 핸들러 추가
 document.getElementById("dotto").addEventListener("click", function () {
     increase();
@@ -47,33 +50,25 @@ document.getElementById("dotto").addEventListener("click", function () {
 
 // 키보드 입력 이벤트 핸들러 추가
 document.body.addEventListener("keydown", function (event) {
-    if (count < maxCount) {
-        increase();
-        toggleImage();
-    }
+//    if (count < maxCount) {
+//        console.log()
+//        increase();
+//        toggleImage();
+//    }
+        if (!keyPressed && count < maxCount) {
+            keyPressed = true; // 키가 눌린 상태로 표시
+            increase();
+//            toggleImage();
+          }
 });
 
 
+// 키보드 이벤트의 keyup 이벤트를 사용하여 키를 놓을 때 keyPressed 변수를 리셋
+document.body.addEventListener("keyup", function (event) {
+  keyPressed = false;
+});
 
 
-
-// 이미지 전환 함수
-//function toggleImage() {
-////    $('#dotto').toggle(
-////        function () {
-////            $('#dotto').attr('src', 'dotto_nuki2.png');
-////        },
-////        function () {
-////            $('#dotto').attr('src', 'dotto_nuki.png');
-////        });
-//    const dotto = $('#dotto');
-//        if (dotto.attr('src') === 'dotto_nuki.png') {
-//            dotto.attr('src', 'dotto_nuki2.png');
-//        } else {
-//            dotto.attr('src', 'dotto_nuki.png');
-//        }
-//
-//}
 function toggleImage() {
     if (isImageNuki) {
         dotto.attr('src', 'dotto_nuki2.png');
@@ -82,8 +77,6 @@ function toggleImage() {
     }
     isImageNuki = !isImageNuki;
 }
-
-
 
 //btn.addEventListener("click", increase);
 // 초기 로딩 시 업데이트
@@ -109,4 +102,13 @@ tooltipIcon.addEventListener('mouseenter', () => {
 
 tooltipIcon.addEventListener('mouseleave', () => {
     tooltipText.style.display = 'none';
+});
+
+
+// "resetcount"가 입력되면 count 값을 초기화하는 함수
+document.getElementById("textBox").addEventListener("input", function () {
+      const textValue = this.value.trim();
+      if (textValue.toLowerCase() === "resetcount") {
+           resetCount();
+      }
 });

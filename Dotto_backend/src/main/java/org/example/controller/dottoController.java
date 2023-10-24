@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class dottoController {
 
     private int clickCount = 0;
-    @GetMapping("/main")
+    @GetMapping("/")
     public String dottoMain(Model model){
         model.addAttribute("click_Count", clickCount);
         return "dotto";
