@@ -58,7 +58,7 @@ document.body.addEventListener("keydown", function (event) {
         if (!keyPressed && count < maxCount) {
             keyPressed = true; // 키가 눌린 상태로 표시
             increase();
-//            toggleImage();
+            toggleImage();
           }
 });
 
