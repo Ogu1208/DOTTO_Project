@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Hello Dotto</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dotto</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<!-- jQuery를 import 합니다 -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-
-
-
 <body>
-    <div><img class="title" src="dotto_title.png"/></div>
-    <div><img id = "dotto" src="dotto_nuki.png" alt="" /></div>
-    <div id = "countNum">0</div>
-    <button id="countbtn">Click!</button>
+    <img class="title" src="dotto_title.png" alt="Dotto Title" />
+    <img id="dotto" src="dotto_nuki.png" alt="Dotto" />
+    <div id="countNum">0</div>
+    <button id="countbtn" aria-label="Click to count">Click!</button>
+
+    <script src="app.js" defer></script>
 </body>
-
-
-<script src="app.js"></script>
 
 </html>
