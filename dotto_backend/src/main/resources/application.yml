@@ -12,4 +12,4 @@ spring:
 # 프론트가 다른 포트/도메인일 때 CORS 허용 목록
 app:
   cors:
-    allowed-origins: "http://localhost:5500,http://127.0.0.1:5500,http://localhost:8080"
+    allowed-origins: "http://localhost:5500,http://127.0.0.1:5500"
